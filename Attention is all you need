@@ -1,0 +1,47 @@
+Attention is all you need (2017) 
+
+자연어 처리에서 
+
+1. Introduction and Limitation of RNN, LSTM, GRU(Gate Recurrent Unit) 
+
+과거부터 RNN, LSTM, GRU는 언어 모델링 및 기계 번역과 같은 sequence 모델링 및 변환 문제에서 뛰어난 성과를 보이는 Recurrent 모델.
+이들 모두 Seq2seq모델이며 동작방식은 다음과 같다.
+(1) 인코더에서 입력 시퀀스를 컨텍스트 벡터라는 하나의 고정된 크기의 벡터 표현으로 압축함
+(2) 디코더에서는 압축된 컨텍스트 벡터를 받아서 출력 시퀀스를 만들어냄
+
+Limitation
+다음의 구성 방식들은 모두 한계를 지니고 있음.
+(1) 고정된 크기의 벡터에 모든 정보를 압축하려고 하니 정보 손실이 발생함.
+(2) RNN의 고질적인 문제인 기울기 소실 (Gradient vanishing) 문제가 존재함.
+
+이러한 문제는 입력 문장이 길면 길수록 번역 품질이 떨어지는 현상으로 이어짐.
+
+
+2. Attention
+
+Attention: 문맥에 따라서 집중할 단어를 결정하는 방식.
+
+Attention은 위와 같이 정확도가 떨어지는 문제를 어느정도 보정 및 보완해주기 위해서 등장한 기법.
+
+다른 점은 다음과 같다.  
+디코더 부분에서 출력 단어를 예측하는 매시점 마다 (Time step) 인코더에서의 전체 입력 문장을 다시 참고하는 것임.
+다만 Attention이라는 뜻과 같이 전체 입력 문장에 대해서 모두 동일한 비율로 참고가 아닌, 시점마다 예측해야할 단어와 연관이 있는 입력 단어 부분을 좀더 집중해서 보게 됨.
+
+
+2-1. Attention Function
+
+
+3. Transformer
+
+
+4. Multi layer
+
+
+5. Experiment Setting & Purpose
+
+
+
+
+6. Performance Index & Experiment Result
+
+
